@@ -11,6 +11,7 @@
 		351D946D1F14BDC000762763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351D946C1F14BDC000762763 /* Assets.xcassets */; };
 		351D94701F14BDC000762763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351D946E1F14BDC000762763 /* LaunchScreen.storyboard */; };
 		354C459E1F14D86D00F31D13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354C459D1F14D86D00F31D13 /* MainViewController.swift */; };
+		35CD23741F14DE2D00E4D882 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD23731F14DE2D00E4D882 /* DataSource.swift */; };
 		DA26A0F933703622889BD11F /* Pods_MVVM_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DFA2A81D7029FDD19AF8F9 /* Pods_MVVM_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		351D946F1F14BDC000762763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351D94711F14BDC000762763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354C459D1F14D86D00F31D13 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		35CD23731F14DE2D00E4D882 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSource.swift; path = Model/DataSource.swift; sourceTree = "<group>"; };
 		35DFA2A81D7029FDD19AF8F9 /* Pods_MVVM_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4365537323FE85CF292FB75C /* Pods-MVVM-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Demo/Pods-MVVM-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,11 +69,12 @@
 		351D94641F14BDC000762763 /* MVVM-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				354C459C1F14D85300F31D13 /* ViewController */,
 				351D94651F14BDC000762763 /* AppDelegate.swift */,
 				351D946C1F14BDC000762763 /* Assets.xcassets */,
-				351D946E1F14BDC000762763 /* LaunchScreen.storyboard */,
 				351D94711F14BDC000762763 /* Info.plist */,
+				351D946E1F14BDC000762763 /* LaunchScreen.storyboard */,
+				35CD23711F14DDE000E4D882 /* Model */,
+				354C459C1F14D85300F31D13 /* ViewController */,
 			);
 			path = "MVVM-Demo";
 			sourceTree = "<group>";
@@ -82,6 +85,14 @@
 				354C459D1F14D86D00F31D13 /* MainViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		35CD23711F14DDE000E4D882 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35CD23731F14DE2D00E4D882 /* DataSource.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		418728E29B210E7B4662D238 /* Pods */ = {
@@ -176,7 +187,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		68F9DB85EBEC92A76D8D5A92 /* [CP] Embed Pods Frameworks */ = {
@@ -216,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CD23741F14DE2D00E4D882 /* DataSource.swift in Sources */,
 				351D94661F14BDC000762763 /* AppDelegate.swift in Sources */,
 				354C459E1F14D86D00F31D13 /* MainViewController.swift in Sources */,
 			);

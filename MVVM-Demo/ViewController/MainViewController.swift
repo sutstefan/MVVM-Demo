@@ -7,29 +7,50 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: Lifecycle
+    
+    override func loadView() {
+        super.loadView()
+        setupUI()
+        loadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: Private
+    
+    private var dataSource: DataSource? {
+        didSet {
+            tableView.reloadData()
+        }
     }
-    */
+    
+    private let tableView = UITableView.init(frame: .zero)
+    
+    private func setupUI() {
+        setupNavigationBar()
+        setupTableView()
+    }
+    
+    private func setupNavigationBar() {
+        title = ""
+    }
+    
+    private func setupTableView() {
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    private func loadData() {
+        dataSource = DataSource()
+    }
+
 
 }
