@@ -7,4 +7,6 @@ target 'MVVM-Demo' do
 
   # Pods for MVVM-Demo
 
+  pod 'SnapKit', '~> 3.2.0'
+
 end
