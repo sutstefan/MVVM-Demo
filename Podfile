@@ -7,6 +7,8 @@ target 'MVVM-Demo' do
 
   # Pods for MVVM-Demo
 
+  pod 'Alamofire', '~> 4.4'
   pod 'SnapKit', '~> 3.2.0'
+  pod 'SwiftyJSON'
 
 end
