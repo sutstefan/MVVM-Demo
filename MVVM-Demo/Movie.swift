@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie {
+struct Country {
     
     
 }

@@ -1,5 +1,5 @@
 //
-//  DataSource.swift
+//  CountryDataSource.swift
 //  MVVM-Demo
 //
 //  Created by Stefan Sut on 7/11/17.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class MovieDataSource: NSObject, UITableViewDataSource {
+class CountryDataSource: NSObject, UITableViewDataSource {
     
     // MARK: Init
     
-    init(movies: [Movie]) {
-        self.movies = movies
+    init(countries: [Country]) {
+        self.countries = countries
         super.init()
     }
     
     // MARK: Private
     
-    private let movies: [Movie]
+    private let countries: [Country]
 
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

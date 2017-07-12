@@ -59,14 +59,6 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-### Swift.Carthage Stack ###
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
-
 ### Swift.CocoaPods Stack ###
 ## CocoaPods GitIgnore Template
 
@@ -74,5 +66,13 @@ Carthage/Build
 #           - Also handy if you have a lage number of dependant pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGONRE THE LOCK FILE
 Pods/
+
+### Swift.Carthage Stack ###
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
 
 # End of https://www.gitignore.io/api/swift

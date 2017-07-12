@@ -1,5 +1,5 @@
 //
-//  MovieService.swift
+//  CountryService.swift
 //  MVVM-Demo
 //
 //  Created by Stefan Sut on 7/12/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class MovieService {
+final class CountryService {
     
     // MARK: Init
     
@@ -16,9 +16,6 @@ final class MovieService {
     
     // MARK: Public
     
-    static let shared = MovieService()
-    
-    
-    
+    static let shared = CountryService()
     
 }
