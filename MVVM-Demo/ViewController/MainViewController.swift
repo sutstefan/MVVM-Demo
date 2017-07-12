@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     
     // MARK: Private
     
-    private var dataSource: DataSource? {
+    private var dataSource: MovieDataSource? {
         didSet {
             tableView.reloadData()
         }
@@ -49,8 +49,7 @@ class MainViewController: UIViewController {
     }
     
     private func loadData() {
-        dataSource = DataSource()
+        dataSource = MovieDataSource.init(movies: [])
     }
-
 
 }

@@ -8,12 +8,23 @@
 
 import UIKit
 
-class DataSource: NSObject, UITableViewDataSource {
+class MovieDataSource: NSObject, UITableViewDataSource {
+    
+    // MARK: Init
+    
+    init(movies: [Movie]) {
+        self.movies = movies
+        super.init()
+    }
+    
+    // MARK: Private
+    
+    private let movies: [Movie]
 
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
