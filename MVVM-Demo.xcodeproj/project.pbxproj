@@ -14,6 +14,9 @@
 		3523451C1F16318C003761D6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3523451B1F16318C003761D6 /* MovieService.swift */; };
 		354C459E1F14D86D00F31D13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354C459D1F14D86D00F31D13 /* MainViewController.swift */; };
 		35CD23741F14DE2D00E4D882 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD23731F14DE2D00E4D882 /* MovieDataSource.swift */; };
+		35F9D2471F1634AF001098E4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F9D2461F1634AF001098E4 /* Reusable.swift */; };
+		35F9D24C1F16355A001098E4 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F9D24B1F16355A001098E4 /* UITableViewCell+Extension.swift */; };
+		35F9D24E1F163594001098E4 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F9D24D1F163594001098E4 /* UITableView+Extension.swift */; };
 		DA26A0F933703622889BD11F /* Pods_MVVM_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DFA2A81D7029FDD19AF8F9 /* Pods_MVVM_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		354C459D1F14D86D00F31D13 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewController/MainViewController.swift; sourceTree = "<group>"; };
 		35CD23731F14DE2D00E4D882 /* MovieDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDataSource.swift; path = Model/MovieDataSource.swift; sourceTree = "<group>"; };
 		35DFA2A81D7029FDD19AF8F9 /* Pods_MVVM_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F9D2461F1634AF001098E4 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		35F9D24B1F16355A001098E4 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		35F9D24D1F163594001098E4 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4365537323FE85CF292FB75C /* Pods-MVVM-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Demo/Pods-MVVM-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +84,9 @@
 				351D94711F14BDC000762763 /* Info.plist */,
 				351D946E1F14BDC000762763 /* LaunchScreen.storyboard */,
 				35CD23711F14DDE000E4D882 /* Model */,
+				35F9D2451F163485001098E4 /* Protocol */,
 				352345181F163076003761D6 /* Service */,
+				35F9D2481F163536001098E4 /* View */,
 				354C459C1F14D85300F31D13 /* ViewController */,
 			);
 			path = "MVVM-Demo";
@@ -107,6 +115,23 @@
 				352345191F1630FB003761D6 /* Movie.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		35F9D2451F163485001098E4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				35F9D2461F1634AF001098E4 /* Reusable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		35F9D2481F163536001098E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35F9D24B1F16355A001098E4 /* UITableViewCell+Extension.swift */,
+				35F9D24D1F163594001098E4 /* UITableView+Extension.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		418728E29B210E7B4662D238 /* Pods */ = {
@@ -241,11 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F9D24C1F16355A001098E4 /* UITableViewCell+Extension.swift in Sources */,
+				35F9D2471F1634AF001098E4 /* Reusable.swift in Sources */,
 				35CD23741F14DE2D00E4D882 /* MovieDataSource.swift in Sources */,
 				3523451A1F1630FB003761D6 /* Movie.swift in Sources */,
 				351D94661F14BDC000762763 /* AppDelegate.swift in Sources */,
 				354C459E1F14D86D00F31D13 /* MainViewController.swift in Sources */,
 				3523451C1F16318C003761D6 /* MovieService.swift in Sources */,
+				35F9D24E1F163594001098E4 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
