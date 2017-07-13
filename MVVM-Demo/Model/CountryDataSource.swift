@@ -28,7 +28,11 @@ class CountryDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as CountryTableViewCell
+        let country = countries[indexPath.row]
+        let viewModel = CountryViewModel.init(model: country)
+        cell.configure(viewModel: viewModel)
+        return cell
     }
     
 }
